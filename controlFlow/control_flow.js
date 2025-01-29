@@ -35,9 +35,19 @@ switch (userType) {
     case "manager":
         userCategory = "Manager";
         break;
-    case "subscriber":
-        userCategory = "Subscriber";
+ 
+    case "Employee":
+        userCategory = "Dietary Services";
         break;
+    case "Enrolled Member":
+        userCategory = "Dietary Services";
+        break;    
+    case "Subscriber":
+        userCategory = "Dietary Services and one-on-one interaction with a dietician";
+        break; 
+    case "Non-Subscriber":
+        userCategory = "enroll or at least subscribe first";
+        break;     
     default:
         userCategory = "Unknown";
 }
