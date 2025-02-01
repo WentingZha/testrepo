@@ -1,0 +1,11 @@
+{
+  "name": "shoppinglogin",
+  "version": "1.0.0",
+  "description": "##Editing the file",
+  "main": "customer_app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
