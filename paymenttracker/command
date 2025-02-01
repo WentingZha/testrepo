@@ -1,0 +1,7 @@
+In the terminal, run the following command to install the node package named mongoose for connnecting to MongoDB server.
+npm install mongoose@8.0.3
+To provide API end points, we need a running server. Express is a Node.js web application framework that allows you to host services. Run the following command to install express.
+npm install express
+To process the input sent to the API end point, you need to install the package body-parser which will be used a middleware. Run the following command to install the package.
+npm install body-parser
+To test the API endpoints from POSTMAN, you need to install the package cors which will be used as middleware. Run the following command to install the package.

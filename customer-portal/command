@@ -1,0 +1,24 @@
+npm init -y
+npm install express jsonwebtoken
+
+curl -X POST \
+  localhost:3000/register \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username": "example_user",
+    "password": "example_password"
+  }'
+
+  curl -X POST \
+  localhost:3000/login \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username": "example_user",
+    "password": "example_password"
+  }'
+
+  curl -X GET \
+  localhost:3000/dashboard \
+  -H 'Authorization:  YOUR_JWT_TOKEN'
+
+  
