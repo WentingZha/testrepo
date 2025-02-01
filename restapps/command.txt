@@ -1,0 +1,19 @@
+mkdir restapps
+cd restapps
+npm init
+npm install mongoose@8.0.3
+npm install express
+npm install body-parser
+
+node employees_list_app.js
+curl http://localhost:3000/api/employees
+curl -X POST http://localhost:3000/api/add_employee \
+-H 'Content-Type: application/json' \
+-d '{
+    "name":"James Harris",
+    "age":25,
+    "location":"Houston",
+    "email":"jharris@gmail.com"
+}'
+
+npm install cors
