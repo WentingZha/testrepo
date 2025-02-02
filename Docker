@@ -1,0 +1,51 @@
+touch Dockerfile
+FROM node:18.12.1-bullseye-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Copy necessary files
+COPY . .
+
+# Expose port 3000 (adjust the port based on your application)
+EXPOSE 3000
+
+# CMD to run the application
+CMD [ "node", "customer_app.js" ]
+
+
+
+
+touch docker-compose.yml
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+ 
+  app:
+    image: customerapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    networks:
+      - app-network
+ 
+networks:
+  app-network:
+    driver: bridge
+
+
+
+docker build . -t customerapp
+docker-compose up
