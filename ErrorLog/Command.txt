@@ -1,0 +1,8 @@
+npm init -y
+npm install express winston
+node app.js
+
+Debug with chrome:
+npm install winston
+node --inspect app.js
+chrome://inspect
